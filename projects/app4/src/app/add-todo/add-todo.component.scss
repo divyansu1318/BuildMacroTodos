@@ -1,0 +1,34 @@
+.form-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.uploaded-image {
+    width: 100px;
+    display: block;
+}
+
+.form-control mat-form-field {
+    width: 45%;
+}
+
+.form-control .date-control {
+    height: fit-content;
+}
+
+.form-control .image-container {
+    width: 45%;
+}
+
+.form-control .image-container input {
+    width: 100%;
+}
+
+h2 {
+    margin-top: 10px;
+}

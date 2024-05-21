@@ -1,0 +1,35 @@
+<h2>
+    {{ isUpdate ? 'Update' : 'Add'}} Todo
+</h2>
+
+<form [formGroup]="todoForm">
+    <div class="form-control">
+        <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description">
+        </mat-form-field>
+    </div>
+
+    <div class="form-control">
+        <mat-form-field class="date-control">
+            <mat-label>Due Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dueDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div class="image-container">
+            <img class="uploaded-image" *ngIf="imageUrl || data?.attachment" [src]="imageUrl || data?.attachment">
+            <input type="file" (change)="onFileSelected($event)">
+        </div>
+    </div>
+
+</form>
+
+<div class="button">
+    <button mat-flat-button color="accent" (click)="add()" [disabled]="!todoForm.valid">{{ isUpdate ? 'Update' : 'Add'}} Todo</button>
+</div>

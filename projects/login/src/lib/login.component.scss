@@ -1,0 +1,20 @@
+.login {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction:column;
+}
+
+.login .container {
+    border: 1px solid #77777740;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.txthead  {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

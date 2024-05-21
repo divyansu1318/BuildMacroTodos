@@ -1,0 +1,19 @@
+<div class="todos">
+    <div class="header">
+        <h2>Todos</h2>
+        <div class="logout">
+            <button mat-stroked-button class="add-button" (click)="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="container" *ngIf="todos.length > 0">
+        <div class="todo" *ngFor="let todo of todos">
+            <img class="todo-image" *ngIf="todo.attachment" [src]="todo.attachment">
+            <div class="title">{{ todo.title }}</div>
+            <div class="description">{{ todo.description }}</div>
+            <div class="due-date" *ngIf="todo.dueDate">Due Date: {{ getDate(todo.dueDate) | date: 'dd-MM-YYYY' }}</div> 
+        </div>
+    </div>
+    <div class="no-list" *ngIf="todos.length === 0">
+        No todos added
+    </div>
+</div>

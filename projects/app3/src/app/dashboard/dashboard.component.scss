@@ -1,0 +1,61 @@
+.todos {
+    text-align: center;
+}
+
+.todos .todo {
+    border: 1px solid;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.todos h2 {
+    margin-top: 0px;
+}
+
+.todo .todo-image {
+    width: 150px;
+    height: 150px;
+}
+
+.todo .title {
+    font-weight: bold;
+}
+
+.todo .description {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+    max-width: 200px;
+}
+
+.todos .header {
+    position: relative;
+    background-color: #111;
+    padding: 10px;
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+.todos .header h2 {
+    margin: 0px;
+}
+
+.add-button {
+    color: #FFF !important;
+    border: 1px solid #FFF !important;
+}
+
+.header .logout {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
